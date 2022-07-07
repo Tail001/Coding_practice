@@ -35,14 +35,38 @@ My solution:
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode *prev = 0, *current = head, *temp;
-        while(current){
-            temp = current -> next;
-            cur -> next = prev;
-            prev = current;
-            current = temp;
+        ListNode *pre = new ListNode(0), *cur = head;
+        pre -> next = head;
+        while (cur && cur -> next) {
+            ListNode* temp = cur -> next;
+            cur -> next = temp -> next;
+            temp -> next = pre -> next;
+            pre -> next = temp;
         }
-        return prev;
+        return pre -> next;
     }
 };
+```
+
+```C++
+ListNode* reverseList(ListNode* head)
+{
+	if (head == NULL)       return head;
+	if (head->next == NULL) return head;
+
+	ListNode *past = NULL, *present = head;
+
+	while (present != NULL)
+	{
+		// main logic:
+		ListNode *future = present->next;
+		present->next = past;
+
+		// updation:
+		past = present;
+		present = future;
+	}
+
+	return past;
+}
 ```

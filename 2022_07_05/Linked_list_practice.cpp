@@ -29,15 +29,15 @@ void LinkedList::PrintList(){
     }
     LinkNode *current = first;
     while(current != 0){
-        cout << current -> data << " ";
-        current = current -> next;
+        cout << current -> data << " "; //當宣告為指標型態時 MyClass * CA
+        current = current -> next;      //就使用箭頭(->)來存取Class中的成員：
     }
     cout << endl;
 }
 void LinkedList::Push_Front(int x){
     LinkNode *newNode = new LinkNode(x);
-    newNode -> next = first;
-    first = newNode;
+    newNode -> next = first;  //當宣告為指標型態時 MyClass * CA
+    first = newNode;          //就使用箭頭(->)來存取Class中的成員：
 }
 void LinkedList::Push_Back(int x){
     LinkNode *newNode = new LinkNode(x);
