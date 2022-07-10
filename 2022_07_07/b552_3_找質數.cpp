@@ -42,7 +42,6 @@ public:
             }
             cout << endl;
         }
-        
         freq = 0;
     }
 };
