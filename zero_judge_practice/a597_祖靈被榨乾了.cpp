@@ -2,6 +2,7 @@
 #include<iostream>
 #include<queue>
 #include<string>
+#include<vector>
 using namespace std;
 class Solution{
     vector<string> map;
@@ -14,7 +15,7 @@ public:
             map.push_back(str);
         }
     }
-    pair<int, int> BFS(int R, int C){
+    pair<int, int> BFS(int R, int C){ //want to find out the way don't need to pass these two values
         const int x_dir[] = {0, 1, 0, -1},  y_dir[] = {1, 0, -1, 0}; // determine direction
         for(int i = 0 ; i < R; i++){
             for(int j  = 0 ; j < C ; j++){
