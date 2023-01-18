@@ -1,4 +1,5 @@
 #3. Longest Substring Without Repeating Characters
+https://leetcode.com/problems/longest-substring-without-repeating-characters/
 C version:
 ######Sliding window algorithm  
 Using hashing, each char has its own space, as it shown in ``` previdx[128] ``` <br> Set two counter i and j, let the string always legal in range $[i,j]$.
